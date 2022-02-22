@@ -16,11 +16,13 @@ url <- read_html("https://www.motor.no/aktuelt/motors-store-vintertest-av-rekkev
   bil <- tabell[[1]]
   bil <-bil[-1,]
   colnames(bil) <- c("Modell (temp. varierte fra 0° til -10°)", "WLTP", "STOPP", "Avvik")
-  #Gjør bil numeric 
+ 
+   #Gjør bil numeric 
   bil$STOPP <- substr(bil$STOPP, 0, 3) %>% 
     as.numeric(bil$STOPP) 
   bil$WLTP <- substr(bil$WLTP, 0, 3) %>% 
     as.numeric(bil$WLTP)
+  
   #Lager plot for faktisk kjørelengde 
   bil1 <-  bil %>%
     ggplot(aes(x =WLTP, y = STOPP)) +
