@@ -34,6 +34,12 @@ url <- read_html("https://www.motor.no/aktuelt/motors-store-vintertest-av-rekkev
   
   print(bil1)
   
+  #I figueren ser vi en 45 graderslinje som viser hvor langt bilene egentlig skulle kjørt. 
+  #Under ser man prikker som viser hvor langt bilene egentlig kan kjører. 
+  #Det kan være flere grunner til at den faktiske kjørelengden er lavere enn forventet kjørelengde, en grunn kan være -
+  #at strømforbruket kan øke ved bruk av aircondition og varme i seter. oppvarming av bil og seter krever mye strøm og kan være
+  #med på å korte ned kjørelengden.
+  
   
   #Oppgave 2
   bil2 <- lm(STOPP ~ WLTP, data = bil)
