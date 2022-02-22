@@ -44,3 +44,5 @@ url <- read_html("https://www.motor.no/aktuelt/motors-store-vintertest-av-rekkev
   #Man kan tydelig se at det er en nedgang fra forventet kjørelengde og faktisk kjørelengde. 
   #Samtlige biler i dette datasettet er under kjørelengden som de respektive selskapene markedsfører at bilene skal ha.
   
+ 
+  
